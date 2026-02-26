@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--colorDetails);
+    color: var(--main);
+    padding: 24px;
+}
+
+.logo{
+
+}
+
+.navList{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.navItem{
+
+}
+
+.navItem:hover{
+    
+}
