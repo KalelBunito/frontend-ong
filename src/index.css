@@ -20,6 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--main);
+  font-family: "Raleway", sans-serif;
 }
 
 h1 {
@@ -44,6 +45,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+p, ul{
+  margin: 0;
 }
 
 @media (prefers-color-scheme: light) {
