@@ -2,22 +2,10 @@ import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import { useAutoScroll } from './EmblaCarouselAutoScroll'
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtons.jsx'
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoScroll()])
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
 
   const { autoScrollIsPlaying, toggleAutoScroll, onAutoScrollButtonClick } =
     useAutoScroll(emblaApi)
@@ -25,11 +13,13 @@ const EmblaCarousel = (props) => {
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
+        <h2>Nossas ongs</h2>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                <span>{index + 1}</span>
+          {slides.map((slide) => (
+            <div className="embla__slide" key={slide.id}>
+              <div className="embla__slide__content">
+                <img src={slide.image} alt={slide.alt} />
+                <p>{slide.name}</p>
               </div>
             </div>
           ))}
@@ -37,23 +27,11 @@ const EmblaCarousel = (props) => {
       </div>
 
       <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton
-            onClick={() => onAutoScrollButtonClick(onPrevButtonClick)}
-            disabled={prevBtnDisabled}
-          />
-          <NextButton
-            onClick={() => onAutoScrollButtonClick(onNextButtonClick)}
-            disabled={nextBtnDisabled}
-          />
-        </div>
-
         <button
           className="embla__play"
-          onClick={toggleAutoScroll}
-          type="button"
+          onClick={() => onAutoScrollButtonClick(toggleAutoScroll)}
         >
-          {autoScrollIsPlaying ? 'Stop' : 'Start'}
+          {autoScrollIsPlaying ? 'Parar' : 'Reproduzir'}
         </button>
       </div>
     </div>
