@@ -19,7 +19,6 @@ const EmblaCarousel = (props) => {
             <div className="embla__slide" key={slide.id}>
               <div className="embla__slide__content">
                 <img src={slide.image} alt={slide.alt} />
-                <p>{slide.name}</p>
               </div>
             </div>
           ))}

@@ -6,11 +6,11 @@ import EmblaCarousel from "./components/Carousel/EmblaCarousel.jsx"
 
 const OPTIONS = { loop: true }
 const SLIDES = [
-  {id: 1, image: './', alt: 'ONG...', name: 'ONG...'},
-  {id: 2, image: './', alt: 'ONG...', name: 'ONG...'},
-  {id: 3, image: './', alt: 'ONG...', name: 'ONG...'},
-  {id: 4, image: './', alt: 'ONG...', name: 'ONG...'},
-  {id: 5, image: './', alt: 'ONG...', name: 'ONG...'}
+  {id: 1, image: './acaochego.png', alt: 'ONG...'},
+  {id: 2, image: './adotar.png', alt: 'ONG...'},
+  {id: 3, image: './bilboanimais.jpg', alt: 'ONG...'},
+  {id: 4, image: './cantodaterra.svg', alt: 'ONG...'},
+  {id: 5, image: './paraisodosfocinhos.png', alt: 'ONG...'}
 ]
 
 export default function App() {
