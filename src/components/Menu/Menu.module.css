@@ -1,0 +1,41 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--colorDetails);
+    color: var(--main);
+    padding: 24px;
+}
+
+.containerLogo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.imgLogo{
+    width: 25px;
+    height: 25px;
+}
+
+.logo{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 24px;
+}
+
+.navList{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+}
+
+.navItem{
+    transition: 0.3s ease-in-out;
+}
+
+.navItem:hover{
+    color: var(--button);
+    transform: scale(1.1);
+    cursor: pointer;
+}

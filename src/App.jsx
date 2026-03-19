@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Menu from "./components/Menu/Menu.jsx"
+import Banner from "./components/Banner/Banner.jsx"
+import '../src/components/Carousel/css/base.css'
+import '../src/components/Carousel/css/embla.css'
+import EmblaCarousel from "./components/Carousel/EmblaCarousel.jsx"
 
-function App() {
-  const [count, setCount] = useState(0)
+const OPTIONS = { loop: true }
+const SLIDES = [
+  {id: 1, image: './', alt: 'ONG...', name: 'ONG...'},
+  {id: 2, image: './', alt: 'ONG...', name: 'ONG...'},
+  {id: 3, image: './', alt: 'ONG...', name: 'ONG...'},
+  {id: 4, image: './', alt: 'ONG...', name: 'ONG...'},
+  {id: 5, image: './', alt: 'ONG...', name: 'ONG...'}
+]
 
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Menu />
+      <Banner />
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+    </div>
   )
 }
-
-export default App
