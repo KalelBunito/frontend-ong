@@ -2,9 +2,10 @@ import { useEffect, useState } from "react"
 import styles from "./Carousel.module.css"
 
 const slides = [
-  { id: 1, image: "guardioes.jpg", name: "ONG 1" },
-  { id: 2, image: "ong-azul.png", name: "ONG 2" },
-  { id: 3, image: "opaa.jpg", name: "ONG 3" }
+  { id: 1, image: "sosunhas.jpg", name: "ONG 1" },
+  { id: 2, image: "paraisodosfocinhos.png", name: "ONG 2" },
+  { id: 3, image: "opaa.jpg", name: "ONG 3" },
+  { id: 4, image: "acaoanimal.png", name: "ONG 4" }
 ]
 
 export default function Carousel() {
