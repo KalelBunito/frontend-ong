@@ -14,3 +14,10 @@ export default function App() {
     </div>
   )
 }
+
+// import { useEffect, useState } from "react";
+
+// estados do compojnente: pendente, carregando, sucesso e erro
+// export default function App() {
+
+// }
